@@ -1,0 +1,417 @@
+/* ======================================== */
+/* GLOBAL STYLES & CSS BOX MODEL            */
+/* ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ======================================== */
+/* HEADER & NAVIGATION                      */
+/* ======================================== */
+
+header {
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover,
+.active {
+    background-color: #ff9800;
+    border-radius: 25px;
+}
+
+/* ======================================== */
+/* HERO SECTION                             */
+/* ======================================== */
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1200');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e68900;
+}
+
+/* ======================================== */
+/* STATS SECTION                            */
+/* ======================================== */
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat-box {
+    background: #2e7d32;
+    color: white;
+    padding: 25px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stat-box h3 {
+    font-size: 32px;
+}
+
+/* ======================================== */
+/* CARDS GRID (For layout)                  */
+/* ======================================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #2e7d32;
+}
+
+/* ======================================== */
+/* FORM STYLES                              */
+/* ======================================== */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #ff9800;
+    outline: none;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+button {
+    background: #ff9800;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e68900;
+}
+
+/* ======================================== */
+/* TABLE STYLES                             */
+/* ======================================== */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #2e7d32;
+    color: white;
+}
+
+tr:hover {
+    background: #f5f5f5;
+}
+
+/* ======================================== */
+/* PAGE HEADER                              */
+/* ======================================== */
+
+.page-header {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.page-header h2 {
+    color: #2e7d32;
+    font-size: 32px;
+}
+
+/* ======================================== */
+/* VIDEO CONTAINER (For YouTube/Vimeo)      */
+/* ======================================== */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Video Placeholder (For text links) */
+.video-placeholder {
+    background: #2e7d32;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.video-placeholder.orange {
+    background: #ff9800;
+}
+
+/* ======================================== */
+/* RESOURCES LIST                           */
+/* ======================================== */
+
+.resources-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resources-list li {
+    margin-bottom: 12px;
+}
+
+.resources-list a {
+    color: #2e7d32;
+    text-decoration: none;
+}
+
+.resources-list a:hover {
+    text-decoration: underline;
+}
+
+.source-note {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* ======================================== */
+/* TIPS LIST                                */
+/* ======================================== */
+
+.tips-list {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.tips-list li {
+    margin-bottom: 10px;
+}
+
+/* ======================================== */
+/* LAWS LIST (Definition List)              */
+/* ======================================== */
+
+.laws-list {
+    padding-left: 20px;
+}
+
+.laws-list dt {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.laws-list dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* ======================================== */
+/* HAMBURGER MENU (Mobile Responsive)       */
+/* ======================================== */
+
+.hamburger {
+    display: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+    text-align: right;
+}
+
+/* Mobile styles (below 768px) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none !important;
+        flex-direction: column;
+        background-color: #1b5e20;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+
+    nav ul.show {
+        display: flex !important;
+    }
+}
+
+/* Desktop (above 768px) */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex !important;
+    }
+}
+
+/* ======================================== */
+/* FOOTER                                   */
+/* ======================================== */
+
+footer {
+    background: #1a1a1a;
+    color: #999;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}

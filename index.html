@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrashTrack Kampala | Clean City Initiative</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ======================================== -->
+    <!-- HEADER with Hamburger Menu                -->
+    <!-- ======================================== -->
+
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <div class="logo-text">
+                    🗑️ TrashTrack Kampala
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+            </div>
+
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home" onclick="closeMenu()">🏠 Home</a></li>
+                    <li><a href="#report" onclick="closeMenu()">📝 Report Waste</a></li>
+                    <li><a href="#map" onclick="closeMenu()">🗺️ Collection Points</a></li>
+                    <li><a href="#education" onclick="closeMenu()">📚 Education Hub</a></li>
+                    <li><a href="#services" onclick="closeMenu()">🏢 Services</a></li>
+                    <li><a href="#resources" onclick="closeMenu()">📄 Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- ======================================== -->
+        <!-- HOME SECTION                             -->
+        <!-- ======================================== -->
+
+        <section id="home">
+            <div class="hero">
+                <h1>🗑️ TrashTrack Kampala</h1>
+                <p>Report illegal dumping. Track cleanup. Keep Kampala Clean.</p>
+                <a href="#report" class="btn" onclick="closeMenu()">Report Waste Now →</a>
+            </div>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>1,245+</h3>
+                    <p>Reports</p>
+                </div>
+                <div class="stat-box">
+                    <h3>87%</h3>
+                    <p>Resolved</p>
+                </div>
+                <div class="stat-box">
+                    <h3>15</h3>
+                    <p>Collection Points</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>🎯 Our Mission</h3>
+                    <p>Change waste disposal habits in Kampala through education, technology, and community action.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li>Reduce illegal dumping by 50%</li>
+                        <li>Empower citizen reporting</li>
+                        <li>Connect businesses to collectors</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>👥 Who We Serve</h3>
+                    <p><strong>Resident Rita:</strong> Wants to report dumping in her neighborhood.</p>
+                    <p><strong>Business Bob:</strong> Needs reliable waste collection schedules.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================== -->
+        <!-- REPORT WASTE SECTION (Form)              -->
+        <!-- ======================================== -->
+
+        <section id="report">
+            <div class="page-header">
+                <h2>📢 Report Illegal Dumping</h2>
+                <p>Fill the form below. Your report goes directly to KCCA.</p>
+            </div>
+
+            <div class="card">
+                <form
+                    onsubmit="alert('✅ Report submitted successfully! KCCA will review within 24 hours. Thank you for helping keep Kampala clean!'); return false;">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" placeholder="e.g., Rita Nakamya" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" placeholder="rita@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Dumping Location *</label>
+                        <input type="text" placeholder="e.g., Near Bwaise Market" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Waste Type *</label>
+                        <select>
+                            <option>-- Select --</option>
+                            <option>Plastic Waste</option>
+                            <option>Organic Waste</option>
+                            <option>Construction Debris</option>
+                            <option>Electronic Waste</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Description *</label>
+                        <textarea rows="4" placeholder="Describe what you saw..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Photo</label>
+                        <input type="file" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Submit anonymously
+                        </label>
+                    </div>
+                    <button type="submit">🚀 Submit Report</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ======================================== -->
+        <!-- COLLECTION POINTS SECTION (Table)        -->
+        <!-- ======================================== -->
+
+        <section id="map">
+            <div class="page-header">
+                <h2>🗺️ Authorized Collection Points</h2>
+                <p>Drop your waste at any of these locations</p>
+            </div>
+
+            <div class="card table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Division</th>
+                            <th>Location</th>
+                            <th>Hours</th>
+                            <th>Waste Types</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Central</td>
+                            <td>Kampala City Market</td>
+                            <td>7am-6pm</td>
+                            <td>Plastic, Organic</td>
+                        </tr>
+                        <tr>
+                            <td>Kawempe</td>
+                            <td>Bwaise Hub</td>
+                            <td>8am-5pm</td>
+                            <td>General, Construction</td>
+                        </tr>
+                        <tr>
+                            <td>Makindye</td>
+                            <td>Ggaba Landing Site</td>
+                            <td>6am-7pm</td>
+                            <td>Plastic, Organic</td>
+                        </tr>
+                        <tr>
+                            <td>Nakawa</td>
+                            <td>Nakawa Market Yard</td>
+                            <td>7am-6pm</td>
+                            <td>All types</td>
+                        </tr>
+                        <tr>
+                            <td>Rubaga</td>
+                            <td>Rubaga Community Center</td>
+                            <td>Wed/Sat 9am-4pm</td>
+                            <td>Plastic, Paper</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ======================================== -->
+        <!-- EDUCATION HUB SECTION                     -->
+        <!-- ======================================== -->
+
+        <section id="education">
+            <div class="page-header">
+                <h2>📚 Education Hub</h2>
+                <p>Learn to reduce, reuse, and recycle</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>🎥 Watch: Waste Management in Kampala</h3>
+                    <div class="video-container">
+                        <iframe src="https://player.vimeo.com/video/137905040" allowfullscreen></iframe>
+                    </div>
+                    <p>This documentary follows a young Ugandan artist teaching youth in Kampala how to turn trash into
+                        treasure through recycling and reusing waste.</p>
+                </div>
+
+                <div class="card">
+                    <h3>♻️ Recycling Tips for Kampala Homes</h3>
+                    <ul class="tips-list">
+                        <li>Rinse plastic bottles before disposal</li>
+                        <li>Start a home compost for kitchen scraps</li>
+                        <li>Separate glass by color (clear, green, brown)</li>
+                        <li>Never burn e-waste - take to collection points</li>
+                        <li>Remove caps and labels from plastic containers</li>
+                        <li>Flatten cardboard boxes to save space</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>📜 Key Laws & Regulations in Uganda</h3>
+                <dl class="laws-list">
+                    <dt>National Environment Act, 2019</dt>
+                    <dd>Illegal dumping penalty: up to UGX 10 million or imprisonment</dd>
+
+                    <dt>KCCA Waste Management Ordinance</dt>
+                    <dd>All businesses must have waste collection contracts with licensed collectors</dd>
+
+                    <dt>Plastic Ban, 2018</dt>
+                    <dd>Thin plastic carrier bags (below 30 microns) are prohibited in Uganda</dd>
+
+                    <dt>National Environment (Waste Management) Regulations, 2020</dt>
+                    <dd>Sets standards for waste handling, storage, and disposal</dd>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ======================================== -->
+        <!-- SERVICES DIRECTORY SECTION                -->
+        <!-- ======================================== -->
+
+        <section id="services">
+            <div class="page-header">
+                <h2>🏢 Licensed Waste Collectors</h2>
+                <p>Contact these verified service providers</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>🚛 Green Kampala Ltd</h3>
+                    <p>📞 0700 123 456</p>
+                    <p>✉️ info@greenkampala.ug</p>
+                    <p>✅ Residential & Commercial</p>
+                </div>
+                <div class="card">
+                    <h3>♻️ EcoClean Uganda</h3>
+                    <p>📞 0755 789 012</p>
+                    <p>✉️ hello@ecoclean.ug</p>
+                    <p>✅ E-waste & Recycling</p>
+                </div>
+                <div class="card">
+                    <h3>🏭 City Waste Solutions</h3>
+                    <p>📞 0772 345 678</p>
+                    <p>✉️ support@citywaste.ug</p>
+                    <p>✅ Industrial & Medical Waste</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================== -->
+        <!-- RESOURCES SECTION                         -->
+        <!-- ======================================== -->
+
+        <section id="resources">
+            <div class="page-header">
+                <h2>📄 Resource Library</h2>
+                <p>Downloadable guides and policies</p>
+            </div>
+
+            <div class="card">
+                <ul class="resources-list">
+                    <li>📥 <a href="javascript:void(0);"
+                            onclick="alert('📄 KCCA Waste Management Guide would download here.')">KCCA Waste Management
+                            Guide (PDF)</a></li>
+                    <li>📥 <a href="javascript:void(0);"
+                            onclick="alert('📄 Home Composting Manual would download here.')">Home Composting Manual
+                            (PDF)</a></li>
+                    <li>📥 <a href="javascript:void(0);"
+                            onclick="alert('🗺️ Recycling Center Locations Map would download here.')">Recycling Center
+                            Locations Map (PDF)</a></li>
+                    <li>📥 <a href="javascript:void(0);"
+                            onclick="alert('📄 Waste Segregation Poster would download here.')">Waste Segregation Poster
+                            (PDF)</a></li>
+                </ul>
+                <p class="source-note">
+                    <em>Source: Official documents from Kampala Capital City Authority (KCCA) and National Environment
+                        Management Authority (NEMA)</em>
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ======================================== -->
+    <!-- FOOTER                                    -->
+    <!-- ======================================== -->
+
+    <footer>
+        <p>© 2026 TrashTrack Kampala | A Clean City Initiative</p>
+        <p>📧 info@trashtrack.ug | 📞 0800-123-456 | Kampala, Uganda</p>
+
+    </footer>
+
+    <!-- ======================================== -->
+    <!-- JavaScript for Hamburger Menu             -->
+    <!-- ======================================== -->
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("navMenu");
+            menu.classList.toggle("show");
+        }
+
+        function closeMenu() {
+            var menu = document.getElementById("navMenu");
+            menu.classList.remove("show");
+        }
+    </script>
+
+</body>
+
+</html>
